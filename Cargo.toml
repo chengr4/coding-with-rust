@@ -2,3 +2,11 @@
 name = "coding_pk"
 version = "0.0.0"
 edition = "2021"
+authors = ["R4 Cheng <karaburi2023@gmail.com>"]
+description = "A simple pk for coding solution"
+readme = "README.md"
+homepage = "https://github.com/chengr4/coding-with-rust"
+repository = "https://github.com/chengr4/coding-with-rust"
+keywords = ["leetcode", "solution"]
+categories = ["algorithms", "data-structures"]
+license = "MIT"

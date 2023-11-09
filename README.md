@@ -1,5 +1,9 @@
 # Coding with Rust
 
+## Hash Map
+
+- Leetcode 1: Two Sum (easy)
+
 ## String
 
 ## DFS

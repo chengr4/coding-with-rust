@@ -14,3 +14,7 @@
 
 - Leetcode 70: Climbing Stairs (easy)
 
+## Linked List
+
+- Leetcode 21: Merge Two Sorted Lists (easy)
+

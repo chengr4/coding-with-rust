@@ -22,3 +22,6 @@
 
 - Leetcode 21: Merge Two Sorted Lists (easy)
 
+## Heap
+
+- Leetcode 215: Kth Largest Element in an Array (medium)

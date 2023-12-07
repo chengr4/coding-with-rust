@@ -1,6 +1,5 @@
 use std::collections::HashSet;
 
-
 pub fn length_of_longest_substring(s: String) -> i32 {
     let mut set = HashSet::new();
     let mut res = 0;
@@ -34,9 +33,3 @@ mod test {
         assert_eq!(length_of_longest_substring("".to_string()), 0);
     }
 }
-
-
-
-
-
-

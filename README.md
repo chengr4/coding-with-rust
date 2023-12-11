@@ -18,6 +18,7 @@
 ## DP
 
 - Leetcode 70: Climbing Stairs (easy)
+- Leetcode 64: Minimum Path Sum (medium)
 
 ## Linked List
 

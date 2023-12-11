@@ -1,6 +1,6 @@
 [package]
 name = "coding_pk"
-version = "0.7.0"
+version = "0.8.0"
 edition = "2021"
 authors = ["R4 Cheng <karaburi2023@gmail.com>"]
 description = "A simple pk for coding solution"

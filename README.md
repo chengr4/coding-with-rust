@@ -8,6 +8,7 @@
 ## Hash Map
 
 - Leetcode 1: Two Sum (easy)
+- Leetcode 49: Group Anagrams (medium)
 
 ## String
 

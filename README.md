@@ -4,6 +4,7 @@
 
 - Leetcode 283: Move Zeroes (easy)
 - Leetcode 11: Container With Most Water (medium)
+- Leetcode 15: 3Sum (medium)
 
 ## Hash Map
 

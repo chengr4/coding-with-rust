@@ -36,8 +36,6 @@ pub fn three_sum(mut nums: Vec<i32>) -> Vec<Vec<i32>> {
     res
 }
 
-// -4 -1 -1 0 1 2
-
 #[cfg(test)]
 mod tests {
     use super::*;

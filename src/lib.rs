@@ -7,3 +7,4 @@ pub mod linked_list;
 pub mod two_pointers;
 pub mod heap;
 pub mod sliding_window;
+pub mod stack;

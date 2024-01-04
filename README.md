@@ -30,6 +30,10 @@
 
 - Leetcode 215: Kth Largest Element in an Array (medium)
 
+## Stack
+
+- Leetcode 394: Decode String (medium)
+
 ## Sliding Window
 
 - Leetcode 3: Longest Substring Without Repeating Characters (medium)

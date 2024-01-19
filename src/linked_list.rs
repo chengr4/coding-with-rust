@@ -1,5 +1,6 @@
 pub mod leetcode21;
 pub mod leetcode19;
+pub mod leetcode206;
 
 #[derive(PartialEq, Eq, Clone, Debug)]
 pub struct ListNode {

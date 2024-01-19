@@ -25,6 +25,7 @@
 ## Linked List
 
 - Leetcode 21: Merge Two Sorted Lists (easy)
+- Leetcode 206: Reverse Linked List (easy)
 
 ## Heap
 

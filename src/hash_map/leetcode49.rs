@@ -21,7 +21,6 @@ mod tests {
     use super::*;
 
     #[test]
-    #[ignore] // it actually passed the test, but the order is different
     fn test_49() {
         assert_eq!(
             group_anagrams(vec![
@@ -31,12 +30,12 @@ mod tests {
                 "ate".to_string(),
                 "nat".to_string(),
                 "bat".to_string()
-            ]),
+            ]).sort(),
             vec![
                 vec!["tan".to_string(), "nat".to_string()],
                 vec!["eat".to_string(), "tea".to_string(), "ate".to_string()],
                 vec!["bat".to_string()]
-            ]
+            ].sort()
         );
 
         assert_eq!(

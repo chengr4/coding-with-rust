@@ -1,4 +1,4 @@
-use std::{cell::RefCell, rc::Rc};
+use std::{cell::RefCell, rc::Rc, collections::HashMap};
 
 
 // RC: 允許一個節點有多個擁有者（HashMap 和 Linked List 鄰居都擁有它）
@@ -70,8 +70,15 @@ impl LRUCache {
             node.borrow_mut().value = value;
             self.move_to_head(node);
         } else {
-            let new_node = Rc::new(RefCell::new(Node::new(key, value)));
+            let new_node = Rc::new(RefCell::new(DNode::new(key, value)));
+            self.map.insert(key, new_node.clone());
+            self.add_to_head(new_node);
 
+            if self.map.len() > self.capacity {
+                if let Some(tail) = self.remove_tail() {
+                    self.map.remove(&tail.borrow().key);
+                }
+            }
         }
     }
 
@@ -80,5 +87,41 @@ impl LRUCache {
         self.add_to_head(node);
     }
 
-    fn 
+    fn remove_node(&self, node: Link) {
+        let prev = node.borrow().prev.clone();
+        let next = node.borrow().next.clone();
+
+        if let Some(prev_node) = prev.clone() {
+            prev_node.borrow_mut().next = next.clone();
+        }
+        if let Some(next_node) = next {
+            next_node.borrow_mut().prev = prev;
+        }
+    }
+
+    fn add_to_head(&self, node: Link) {
+        let old_first = self.head_node.borrow().next.clone();
+        
+        node.borrow_mut().prev = Some(self.head_node.clone());
+        node.borrow_mut().next = old_first.clone();
+        
+        self.head_node.borrow_mut().next = Some(node.clone());
+        
+        if let Some(old_first_node) = old_first {
+            old_first_node.borrow_mut().prev = Some(node);
+        }
+    }
+
+    fn remove_tail(&self) -> Option<Link> {
+        let tail_prev = self.tail_node.borrow().prev.clone();
+        
+        if let Some(last_node) = tail_prev {
+            if Rc::ptr_eq(&last_node, &self.head_node) {
+                return None;
+            }
+            self.remove_node(last_node.clone());
+            return Some(last_node);
+        }
+        None
+    }
 }
